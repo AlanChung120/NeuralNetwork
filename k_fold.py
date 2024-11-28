@@ -13,10 +13,10 @@ def load_dataset(csv_path, target_feature):
     X = dataset.drop([target_feature], axis=1).to_numpy()
     return X, t
 
-X, y = load_dataset("data/wine_quality.csv", "quality")
+X, y = load_dataset("./wine_quality.csv", "quality")
 
 n_features = X.shape[1]
-epochs = 10
+epochs = 500
 
 k = 5
 epoch_losses = []
